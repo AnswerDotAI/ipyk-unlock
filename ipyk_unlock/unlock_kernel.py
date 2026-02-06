@@ -1,5 +1,5 @@
 from ipykernel.ipkernel import IPythonKernel
-
+import contextlib
 from . import __version__
 
 class UnlockKernel(IPythonKernel):
@@ -13,5 +13,4 @@ class UnlockKernel(IPythonKernel):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        import contextlib
         self._main_asyncio_lock = contextlib.nullcontext()
