@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ipyk-unlock"
+version = "0.1.0"
+description = "Minimal custom ipykernel launcher using a custom kernel subclass"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["ipykernel>=6.0"]
+
+[project.urls]
+Homepage = "https://github.com/fastai/ipyk-unlock"
+
+[project.scripts]
+ipyku-launcher = "ipyku_launcher:main"
+
+[tool.setuptools]
+packages = ["ipyk_unlock"]
+py-modules = ["ipyku_launcher"]
