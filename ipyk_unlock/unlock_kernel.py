@@ -1,8 +1,10 @@
 from ipykernel.ipkernel import IPythonKernel
 
+from . import __version__
+
 class UnlockKernel(IPythonKernel):
     implementation = "unlock-kernel"
-    implementation_version = "0.1.0"
+    implementation_version = __version__
     language = "python"
     language_version = "3.x"
     language_info = dict(name="python", mimetype="text/x-python",

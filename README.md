@@ -22,6 +22,12 @@ Default kernelspec name is `python3-unlock` (on Python 3).
 pip install -e .
 ```
 
+For release tooling:
+
+```bash
+pip install -e .[dev]
+```
+
 ## Use in a kernelspec
 
 Set `argv` in `kernel.json` to:
